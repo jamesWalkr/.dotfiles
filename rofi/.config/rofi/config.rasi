@@ -1,0 +1,123 @@
+configuration {
+    display-drun: "";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{icon} {name}";
+    // font: "JetBrainsMono Nerd Font Medium 10";
+    font: "Roboto Regular 11";
+    modi: "window,run,drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+  @theme "/dev/null"
+
+* {
+    // bg: #fa8cf5;
+    // bg: #4a0347;
+    bg: #4a03470D;
+    bg-alt: #eb6f92;
+
+    fg: #cdd6f4;
+
+    background-color: @bg;
+    //background-color: transparent;
+
+    border: 0; 
+    margin: 0;
+    padding: 0;
+    // spacing: 2;
+    spacing: 0;
+}
+
+window {
+    width: 25%;
+    border: 2;
+    // border-color: #89FA8F;
+    border-color: #ebbcba;
+    border-radius: 8px;
+
+    background-color: @bg;
+}
+
+element {
+    // padding: 6;
+    padding: 8px 16px;
+    spacing: 8px;
+    border-radius: 16px;
+    // background-color: @bg;
+    // text-color: #0af015;
+    text-color: #ebbcba;
+}
+
+element selected {
+  background-color: @bg-alt;
+  text-color: inherit;
+  border-radius: 2%;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  background-color: inherit;
+  text-color: inherit;
+  size: 30;
+}
+
+entry {
+  background-color: @bg;
+  padding: 10;
+  text-color: inherit;
+}
+
+inputbar {  
+  // border-color: #0af015;
+  border-color: #ebbcba;
+
+  border: 2px;
+  border-radius: 2%;
+
+  // padding: 8px 16px;
+  spacing: 8px;
+  children: [prompt, entry];
+}
+
+inputbar {
+  background-color: @bg;
+}
+
+listview {
+  // background-color: @bg;
+  // background-color: transparent;
+  // margin: 0 10 10 10;
+  margin: 12px 0 0;
+  columns: 1;
+  // lines: 6;
+  lines: 8;
+
+  fixed-height: false;
+  
+}
+
+mainbox {
+  // background-color: @bg;
+  padding: 12px;
+  children: [inputbar, listview];
+}
+
+prompt {
+  // background-color: @bg;
+  enabled: true;
+  padding: 10;
+  text-color: inherit;
+}
+
+entry {
+  text-color: #0af015;
+  padding: 10 10 0 0;
+  margin: 0 -2 0 0;
+}
